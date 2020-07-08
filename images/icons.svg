@@ -14,4 +14,11 @@
         </g>
     </svg>
 
+		<svg viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g id="check" class="img">
+				<path d="M2 10L11.8824 19L23 1" stroke="#E0B589" stroke-width="3"/>
+			</g>
+		</svg>
+
+
 </svg>
