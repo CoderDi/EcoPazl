@@ -20,6 +20,50 @@ $(document).ready(function(){
   });
 
   
+  //counter
+  $(".js-counter-minus").click(function(){
+    let inputCount = $(this).parents(".counter").find(".js-counter-input");
+    let count = parseInt($(inputCount).val());
+    if (count) {
+      count--;
+    } else {
+      count = 1;
+    }
+    if (count < 1) count = 1;
+    $(inputCount).val(count);
+  });
+  $(".js-counter-plus").click(function(){
+    let inputCount = $(this).parents(".counter").find(".js-counter-input");
+    let count = parseInt($(inputCount).val());
+    if (count) {
+      count++;
+    } else {
+      count = 1;
+    }
+    $(inputCount).val(count);
+  });
+  $(".js-counter-input").keyup(function(){
+    $(this).val($(this).val().replace (/[^0-9+]/g, ''));
+    if (!($(this).val())) {
+      $(this).val("1");
+    }
+  });
+
+  $(".js-itemAddCart").click(function(){
+    $(this).parents(".item").addClass("in-cart");
+    $(this).addClass("in-cart");
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   $(".js-slider").slick({
     infinite: false,
     autoplay: true,
