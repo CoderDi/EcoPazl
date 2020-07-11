@@ -20,5 +20,13 @@
 			</g>
 		</svg>
 
+        <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="yes" class="img">
+                <path d="M2 7.5L9.05882 14L17 1" stroke="white" stroke-width="3"/>
+            </g>
+        </svg>
+
+
+
 
 </svg>

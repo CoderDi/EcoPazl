@@ -6,7 +6,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $c = true;
 if ( $method === 'POST' ) {
 
-	$project_name = "ООО Капитал | Заявка с сайта";
+	$project_name = "EcoPazl";
 	$admin_email  = "demon101k@gmail.com";
 	$form_subject = trim($_POST["form_subject"]);
 
@@ -14,7 +14,12 @@ if ( $method === 'POST' ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
 			if ($key == "Name") $key = "Имя";
 			if ($key == "Phone") $key = "Телефон";
+			if ($key == "Email") $key = "E-mail";
+			if ($key == "Address") $key = "Адрес";
+			if ($key == "Delivery") $key = "Доставка";
 			if ($key == "Message") $key = "Сообщение";
+			if ($key == "Tovars") $key = "Товары";
+			
 			$message .= "
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
