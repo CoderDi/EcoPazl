@@ -12,16 +12,21 @@
     <div class="header-top">
       <div class="wrapper">
         <div class="header-top__wrapper flex">
-          <a href="" class="logo flex">
-            <img src="images/logo.png" alt="">
-            <strong>EcoPazl</strong>
-          </a>
-          <span class="header-text">Деревянные конструкторы и коллекционные <br> 3D-модели для любого возраста оптом по России.</span>
-          <div class="header-cart">
-            <i></i>
-            Корзина товаров
-            <span class="header-cart-count" id="headerCartCount">0</span>
+          <div class="header-fix-mobile">
+            <a href="" class="logo flex">
+              <img src="images/logo.png" alt="">
+              <strong>EcoPazl</strong>
+            </a>
+            <span class="header-text"><span>Деревянные конструкторы и коллекционные <br> 3D-модели для любого возраста оптом по России.</span></span>
+            <div class="header-cart js-getcart">
+              <i></i>
+              <span class="header-cart-text">Корзина товаров</span>
+              <span class="header-cart-count" id="headerCartCount">0</span>
+            </div>
           </div>
+          
+          <span class="header-text-mobile"><span>Деревянные конструкторы и коллекционные 3D-модели для любого возраста оптом по России.</span></span>
+          
           <div class="header-contacts">
             <a href="tel:+7 (987) 730-02-00" class="header-phone">+7 (987) 730-02-00</a> <br>
             <span class="header-getcall js-getcall">Заказать обратный звонок</span>
@@ -32,10 +37,11 @@
 
     <div class="menu">
       <div class="wrapper">
+        <div class="butter"><i></i>МЕНЮ САЙТА</div>
         <ul class="menu-container flex">
           <li class="menu-item"><a href="">Главная</a></li>
-          <li class="menu-item">
-            <a href="">Каталог товаров <i></i></a>
+          <li class="menu-item menu-item-drop">
+            <a>Каталог товаров <i></i></a>
             <div class="menu-drop">
               <ul class="menu-drop__container">
                 <li class="menu-drop__item"><a href="">Экопазлы</a></li>
@@ -54,10 +60,17 @@
             </div>
           </li>
           <li class="menu-item"><a href="">Фотогалерея</a></li>
-          <li class="menu-item"><a href="">Распродажа</a></li>
-          <li class="menu-item"><a href="">Доставка и оплата</a></li>
-          <li class="menu-item"><a href="">Отзывы</a></li>
-          <li class="menu-item"><a href="">Контакты</a></li>
+          <div class="menu-toggle flex">
+            <div class="menu-toggle__container flex">
+              <span class="menu-toggle__btn"><i></i>МЕНЮ САЙТА</span>
+              <div class="menu-toggle__list flex">
+                <li class="menu-item"><a href="">Распродажа</a></li>
+                <li class="menu-item"><a href="">Доставка и оплата</a></li>
+                <li class="menu-item"><a href="">Отзывы</a></li>
+                <li class="menu-item"><a href="">Контакты</a></li>
+              </div>
+            </div>            
+          </div>
         </ul>
       </div>
     </div>
@@ -84,6 +97,10 @@
         <div class="banner-img">
           <img src="images/banner-img.png" alt="">
         </div>
+
+        <div class="banner-btn-mobile">
+          <span class="banner-btn">Заказать звонок</span>
+        </div>
       </div>
     </div>
   </section> -->
@@ -93,7 +110,9 @@
       <div class="desc__wrapper">
         <div class="desc__img"><img src="images/biplane.png" alt=""></div>
         <div class="desc__content">
-          <p class="desc__text">Уникальные модели 3D-пазлов от EcoPazl – это конструкторы из качественной шлифованной березовой фанеры и разнообразным модельным рядом для любого возраста – как для детей, так и для взрослых.</p>
+          <p class="desc__text">
+            <img src="images/biplane.png" alt="">
+            Уникальные модели 3D-пазлов от EcoPazl – это конструкторы из качественной шлифованной березовой фанеры и разнообразным модельным рядом для любого возраста – как для детей, так и для взрослых.</p>
           <div class="desc__flex">
             <div class="desc__item">
               <span class="desc__item_img desc__item_img--price"></span>
@@ -117,7 +136,7 @@
     </div>
   </section> -->
 
-  <!-- <main class="main">
+  <main class="main">
     <div class="wrapper">
       <div class="main__wrapper">
         <aside class="sidebar">
@@ -313,12 +332,13 @@
         </section>
       </div>
     </div>
-  </main> -->
+  </main>
 
-  <section class="why">
-    <div class="wrapper">
-      <strong class="why__title">Почему мы?</strong>
-      <span class="why__subtitle">Посмотрите, чем мы отличаемся от гаражных предприятий.</span>
+  <!-- <section class="why">
+    <div class="wrapper why__wrapper">
+      <img src="images/biplane2.png" alt="" class="why-img-plane">
+      <strong class="section__title">Почему мы?</strong>
+      <span class="section__subtitle">Посмотрите, чем мы отличаемся от гаражных предприятий.</span>
       <div class="why__list">
         <div class="why__item">
           <div class="why__item_container">
@@ -357,17 +377,119 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-
+  <!-- <section class="call">
+    <div class="wrapper">
+      <div class="call__wrapper">
+        <strong class="section__title">Заявка на обратный звонок</strong>
+        <span class="section__subtitle">Закажите обратный звонок и мы перезвоним Вам!</span>
+        <form class="call-form">
+          <label class="label">
+            <span class="label-span">Представьтесь, пожалуйста<span class="red">*</span></span>
+            <input type="text" name="Name" class="input input--call" placeholder="Как к Вам обращаться?" required>
+          </label>
+          <label class="label">
+            <span class="label-span">Контактный телефон<span class="red">*</span></span>
+            <input type="tel" name="Phone" class="input input--call" placeholder="Укажите телефон для связи" required>
+          </label>
+          <label class="label">
+            <span class="label-span">Контактный Email (необязательно)</span>
+            <input type="email" name="Email" class="input input--call" placeholder="Укажите Email адрес">
+          </label>
+          <label class="label">
+            <span class="label-span">Ваше сообщение (необязательно)</span>
+            <textarea name="Message" class="input input--call textarea" placeholder="Начните писать текст..."></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" checked>
+            <span class="check-custom"></span>
+            <span class="check-text">Я согласен на обработку <a href="">персональных данных</a></span>
+          </label>
+          <input type="submit" value="Отправить заявку" class="submit">
+        </form>
+      </div>
+    </div>
+  </section> -->
 
   <footer class="footer">
+    <div class="footer-top">
+      <div class="wrapper">
+        <div class="footer-top__wrapper">
+          <div class="footer-logo-block">
+            <a href="" class="logo flex footer-logo">
+              <img src="images/logo.png" alt="">
+              <strong>EcoPazl</strong>
+            </a>
+            <span class="footer-logo-block__text">EcoPazl 2020 © — Производство сборных моделей деревянных игрушек</span>
+          </div>
 
+          <div class="footer-menu-block footer-menu-block1">
+            <strong>Каталог товаров</strong>
+            <ul class="footer-menu footer-menu-2cols">
+              <li class="footer-menu__item"><a href="">Экопазлы</a></li>
+              <li class="footer-menu__item"><a href="">Домики</a></li>
+              <li class="footer-menu__item"><a href="">Авто</a></li>
+              <li class="footer-menu__item"><a href="">Поезда</a></li>
+              <li class="footer-menu__item"><a href="">Корабли</a></li>
+              <li class="footer-menu__item"><a href="">Самолеты</a></li>
+              <li class="footer-menu__item"><a href="">Военная техника</a></li>
+              <li class="footer-menu__item"><a href="">Для девочек</a></li>
+              <li class="footer-menu__item"><a href="">Для мальчиков</a></li>
+              <li class="footer-menu__item"><a href="">Развивающие игрушки</a></li>
+              <li class="footer-menu__item"><a href="">Для дома</a></li>
+              <li class="footer-menu__item"><a href="">Разное</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-menu-block">
+            <strong>Сервис и помощь</strong>
+            <ul class="footer-menu">
+              <li class="footer-menu__item"><a href="">Доставка и оплата</a></li>
+              <li class="footer-menu__item"><a href="">Отзывы</a></li>
+              <li class="footer-menu__item"><a href="">Гарантия и возврат</a></li>
+              <li class="footer-menu__item"><a href="">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contacts">
+            <strong>Связь с нами</strong>
+            <span class="footer-contacts-text">Ежедневно: с 8:00 до 20:00</span>
+            <span class="footer-contacts-text">Телефон: <a href="tel:+7 (987) 730-02-00" class="phone">+7 (987) 730-02-00</a></span>
+            <span class="footer-contacts-text">Для писем: <a href="mailto:info@ecopazl.ru" class="mail">info@ecopazl.ru</a></span>
+            <span class="footer-contacts-text footer-contacts__getcall js-getcall">[ Заказать обратный звонок ]</span>
+            <div class="footer-socials">
+              <a href="" class="footer-socials__item footer-socials__item--whatsapp"></a>
+              <a href="" class="footer-socials__item footer-socials__item--viber"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="wrapper">
+        <div class="footer-bottom__wrapper flex">
+          <span class="copyright">ИП Никифоров А.О, ОГРНИП 65457657456</span>
+          <div class="litex">
+            <div class="litex-btn">Делали в веб-студии «Лайтекс»</div>
+            <div class="litex-block">
+              <div class="litex-block-container">
+                <strong class="litex-block__title">Что-то интересует?</strong>
+                <a href="" target="blank" class="litex-block__link">Разработка сайта</a>
+                <a href="" target="blank" class="litex-block__link">Продвижение сайта</a>
+                <a href="" target="blank" class="litex-block__link">Поддержка сайта</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <div class="bottom-cart">
     <div class="wrapper bottom-cart__wrapper">
-      <div class="bottom-cart-btn">
+      <div class="bottom-cart-btn js-getcart">
         <div class="bottom-cart__tooltip">
           <strong>= 2.375 руб.</strong> <br>
           <span>Мин. сумма: 5.000 р.</span>
@@ -378,11 +500,132 @@
   </div>
 
   <div class="popup">
-    <a class="popup-bg"></a>
+    <a class="popup-bg js-close"></a>
     <div class="popup-content">
-      <a class="popup-close"></a>
+      <a class="popup-close close js-close">X</a>
 
-      <div class="popup-block" id="popup-block">
+      <div class="popup-block popup-block--call" id="popup-call">
+        <strong class="popup-title">Заявка на обратный звонок</strong>
+        <form class="popup-form">
+          <label class="label label--popup">
+            <span class="label-span">Представьтесь, пожалуйста<span class="red">*</span></span>
+            <input type="text" name="Name" class="input input--call" placeholder="Как к Вам обращаться?" required>
+          </label>
+          <label class="label label--popup">
+            <span class="label-span">Контактный телефон<span class="red">*</span></span>
+            <input type="tel" name="Phone" class="input input--call" placeholder="Укажите телефон для связи" required>
+          </label>
+          <label class="check check--popup">
+            <input type="checkbox" checked>
+            <span class="check-custom"></span>
+            <span class="check-text">Я согласен на обработку <a href="">персональных данных</a></span>
+          </label>
+          <input type="submit" value="Заказать звонок" class="submit">
+        </form>
+      </div>
+
+      <div class="popup-block cart" id="cart">
+        <div class="popup-block__container">
+          <div class="cart-empty">
+            <strong>Корзина пуста!</strong>
+          </div>
+
+          <div class="cart-full">
+            <strong class="cart-title">Ваш заказ:</strong>
+            <div class="cart-list">
+              <div class="cart-item">
+                <div class="cart-item__img"><img src="images/safe.png" alt=""></div>
+                <a href="" target="_blank" class="cart-item__title">Механический
+                  сейф</a>
+                <div class="counter counter--cart">
+                  <span class="counter-btn js-counter-minus">-</span>
+                  <input type="text" class="counter-input js-counter-input" value="1">
+                  <span class="counter-btn js-counter-plus">+</span>
+                </div>
+                <strong class="cart-item__price">1.990 руб.</strong>
+                <a class="close cart-item-remove js-item-remove">x</a>
+              </div>
+
+              <div class="cart-item">
+                <div class="cart-item__img"><img src="images/safe.png" alt=""></div>
+                <a href="" target="_blank" class="cart-item__title">Механический
+                  сейф</a>
+                <div class="counter counter--cart">
+                  <span class="counter-btn js-counter-minus">-</span>
+                  <input type="text" class="counter-input js-counter-input" value="1">
+                  <span class="counter-btn js-counter-plus">+</span>
+                </div>
+                <strong class="cart-item__price">1.990 руб.</strong>
+                <a class="close cart-item-remove js-item-remove">x</a>
+              </div>
+
+              <div class="cart-summ">
+                <b>Сумма заказа: </b>
+                <span>4.500 руб.</span>
+              </div>
+            </div>
+
+            <div class="cart-alert">
+              Минимальная сумма заказа: 5.000 руб.
+            </div>
+
+            <form class="cart-form">
+              <strong class="cart-title cart-form-title">Оформление заказа:</strong>
+              <label class="label">
+                <span class="label-span">Представьтесь, пожалуйста<span class="red">*</span></span>
+                <input type="text" name="Name" class="input input--call" placeholder="Как к Вам обращаться?" required>
+              </label>
+              <label class="label">
+                <span class="label-span">Контактный телефон<span class="red">*</span></span>
+                <input type="tel" name="Phone" class="input input--call" placeholder="Укажите телефон для связи" required>
+              </label>
+              <label class="label">
+                <span class="label-span">Контактный Email (необязательно)</span>
+                <input type="email" name="Email" class="input input--call" placeholder="Укажите Email адрес">
+              </label>
+              <label class="label">
+                <span class="label-span">Адрес доставки<span class="red">*</span></span>
+                <input type="text" name="Address" class="input input--call" placeholder="Укажите полный адрес" required>
+              </label>
+              <div class="popup-radio-group">
+                <span class="label-span popup-radio-group-span">Выберите вариант доставки*</span>
+                <label class="radio">
+                  <input type="radio" name="Delivery" value="Получение на пункте Деловые линии (от 170 руб.)" checked>
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">Получение на пункте Деловые линии (от 170 руб.)</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="Delivery" value="Доставка Почтой России (цена зависит от региона, по предоплате)" >
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">Доставка Почтой России (цена зависит от региона, по предоплате)</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="Delivery" value="Курьерская доставка по вашему адресу (от 300 руб.)" >
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">Курьерская доставка по вашему адресу (от 300 руб.)</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="Delivery" value="Самовывоз (г. Йошкар-Ола)" >
+                  <span class="radio-custom"></span>
+                  <span class="radio-text">Самовывоз (г. Йошкар-Ола)</span>
+                </label>
+              </div>
+              <label class="label">
+                <span class="label-span">Комментарий (необязательно)</span>
+                <textarea name="Message" class="input input--call textarea" placeholder="Начните писать текст..."></textarea>
+              </label>
+
+              <span class="cart-form-required"><span class="red">*</span> – поля, обязательные для заполнения</span>
+              <strong class="cart-form-all-itog"><b>Итоговая сумма:</b> 11.970 руб.</strong>
+              <label class="check cart-check">
+                <input type="checkbox" checked>
+                <span class="check-custom"></span>
+                <span class="check-text">Я согласен на обработку <a href="">персональных данных</a></span>
+              </label>
+              <input type="submit" value="Отправить заявку" class="submit">
+            </form>
+          </div>
+        </div>
         
       </div>
     </div>
